@@ -1,0 +1,44 @@
+{
+  "version": "4",
+  "specifiers": {
+    "jsr:@std/assert@1": "1.0.6",
+    "jsr:@std/internal@^1.0.4": "1.0.4",
+    "npm:prettier@^3.3.3": "3.3.3"
+  },
+  "jsr": {
+    "@std/assert@1.0.6": {
+      "integrity": "1904c05806a25d94fe791d6d883b685c9e2dcd60e4f9fc30f4fc5cf010c72207",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
+    },
+    "@std/internal@1.0.4": {
+      "integrity": "62e8e4911527e5e4f307741a795c0b0a9e6958d0b3790716ae71ce085f755422"
+    }
+  },
+  "npm": {
+    "prettier@3.3.3": {
+      "integrity": "sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew=="
+    }
+  },
+  "redirects": {
+    "https://cdn.skypack.dev/new/purify-ts@v2.1.0/dist=es2019": "https://cdn.skypack.dev/-/purify-ts@v2.1.0-eXRccotFXo68A9f7vDV7/dist=es2019,mode=imports/optimized/purify-ts.js",
+    "https://cdn.skypack.dev/purify-ts": "https://cdn.skypack.dev/new/purify-ts@v2.1.0/dist=es2019"
+  },
+  "remote": {
+    "https://cdn.skypack.dev/-/purify-ts@v2.1.0-eXRccotFXo68A9f7vDV7/dist=es2019,mode=imports/optimized/common/Either-183dddb0.js": "c8cfc0884c6b0d95d50715f83632987b3e286fd881ee77e39f2c026488a8d247",
+    "https://cdn.skypack.dev/-/purify-ts@v2.1.0-eXRccotFXo68A9f7vDV7/dist=es2019,mode=imports/optimized/common/MaybeAsync-519e294a.js": "f22cee6af17c12d4783e5fe4969f067090396e0aba707145eed0d0a867adbd6e",
+    "https://cdn.skypack.dev/-/purify-ts@v2.1.0-eXRccotFXo68A9f7vDV7/dist=es2019,mode=imports/optimized/purify-ts.js": "dc4d6f9145678dd150717ee914c6d49c420a64d0c15f1927c0f4c3f68789f444",
+    "https://cdn.skypack.dev/-/purify-ts@v2.1.0-eXRccotFXo68A9f7vDV7/dist=es2019,mode=imports/optimized/purify-ts/Codec.js": "1fe17cbc873993930e67db7e7b6ce10b2124a6300d941bd4ee3be4b2889c4f78",
+    "https://cdn.skypack.dev/-/purify-ts@v2.1.0-eXRccotFXo68A9f7vDV7/dist=es2019,mode=imports/optimized/purify-ts/Function.js": "cf3b99766e6fc939aea6c3d40fc321011211e7eb810394196cc7218853b454f1",
+    "https://cdn.skypack.dev/-/purify-ts@v2.1.0-eXRccotFXo68A9f7vDV7/dist=es2019,mode=imports/optimized/purify-ts/List.js": "fa893cf84f475f944262ce100f12c187ea6f7d3c9917235d98792af1f92f6347",
+    "https://cdn.skypack.dev/-/purify-ts@v2.1.0-eXRccotFXo68A9f7vDV7/dist=es2019,mode=imports/optimized/purify-ts/NonEmptyList.js": "c605f78ac93d2c9c58c0527e010e565544345717d41ab57fdeb247ba0eaa4649",
+    "https://cdn.skypack.dev/-/purify-ts@v2.1.0-eXRccotFXo68A9f7vDV7/dist=es2019,mode=imports/optimized/purify-ts/Tuple.js": "154a15d4d5678bccef7fde5b23eb2f210f00aead40c6556cde8da01d1cf2b624"
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@std/assert@1",
+      "npm:prettier@^3.3.3"
+    ]
+  }
+}
