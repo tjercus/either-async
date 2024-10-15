@@ -10,8 +10,6 @@ type Machine = {
   color: string;
 }
 
-// type Combined = Animal & Machine ;
-
 type Combined = {
   skin: string;
   legs: number;
@@ -26,6 +24,7 @@ type CustomError = {
 /* ------------------------- test data --------------------------  */
 
 const firstAnimal: Right<Animal> = ({ skin: "fur", legs: 4 });
+
 const firstMachine: Right<Machine> = ({ weight: 100, color: "red" });
 
 /* ------------------------- functions --------------------------  */
@@ -62,17 +61,19 @@ const combineAnimalAndMachine = (animal: Animal) => (machine: Machine) => {
 //     .ap(getMachineFromApi()) // Apply the second applicative (machine)
 
 // Composing the two applicatives using chain and map
+// NOTE this DOES work!
 const combinedResult: EitherAsync<CustomError, Combined> =
-  getAnimalFromApi().chain((animal: Animal) =>
-    getMachineFromApi().map((machine: Machine) =>
-      combineAnimalAndMachine(animal)(machine))
+  getAnimalFromApi().chain(
+    (animal: Animal) => getMachineFromApi().map(
+      (machine: Machine) => combineAnimalAndMachine(animal)(machine)
+    )
   );
 
 /* ---------------------------- runtime ---------------------------  */
 
 const animalAndMachineEither: Either<CustomError, Combined> = await combinedResult.run();
 
-// To run the flow
+// To run the flow using some pattern matching on the forked result
 animalAndMachineEither.caseOf({
   Left: (error: CustomError) => {
     console.error("An error occurred:", error.message);
