@@ -1,4 +1,4 @@
-import { Maybe, Either, EitherAsync, Left, Right } from "purify-ts";
+import { Either, EitherAsync, Left, Right } from "purify-ts";
 
 type Animal = {
   skin: string;
@@ -31,12 +31,14 @@ const firstMachine: Right<Machine> = ({ weight: 100, color: "red" });
 
 export const getAnimalFromApi = (): EitherAsync<CustomError, Animal> => {
   return EitherAsync(async ({ liftEither }) => {
+    // simulate a real API call (like fetch) here
     return liftEither(Right(firstAnimal))
   });
 };
 
 const getMachineFromApi = (): EitherAsync<CustomError, Machine> => {
   return EitherAsync(async ({ liftEither }) => {
+    // simulate a real API call (like fetch) here
     return liftEither(Right(firstMachine))
   });
 };
